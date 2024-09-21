@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Ticketing</title>
+    <!-- Tailwind and Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/f1872612b9.js" crossorigin="anonymous"></script>
+    <!-- customizing styles -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#1DD100',
+                secondary: '#1DD10026',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <!-- Header Section content -->
+    <header></header>
+
+    <!-- main Section Content -->
+    <main class="">
+        <section class="w-11/12 mx-auto">
+            <!-- information form -->
+            <section class="border-2">
+                <div class="space-y-3 text-center w-4/6 mx-auto">
+                    <h1 class="text-2xl font-bold">P.H Paribahan</h1>
+                    <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+                </div>
+
+                <div class="flex justify-between mt-6">
+                    <div class="w-[75%] p-6">
+                        <div class="flex justify-between">
+                            <div class="flex gap-3">
+                                <img src="./images/bus-logo.png" alt="">
+                                <span>
+                                    <h2 class="text-2xl font-bold">Greenline Paribahan</h2>
+                                    <p class="text-base">Coach-009-WEB ! AC_Business</p>
+                                </span>
+                            </div>
+                            <div>
+                                <button class="btn bg-secondary text-primary">
+                                    <i class="fa-solid fa-bus"></i>
+                                    <span id="rest-seat">40</span> Seats left</button>
+                            </div>
+                        </div>
+                        <div class="bg-gray-200 rounded-xl p-4 mt-5 space-y-4">
+                            <div class="grid grid-cols-3">
+                                <span>Route</span>
+                                <span></span>
+                                <span class="text-end">Dhaka - Sylhet</span>
+                            </div>
+                            <div class="border-2 border-dashed border-gray-300"></div>
+                            <div class="grid grid-cols-3">
+                                <span>Departure Time</span>
+                                <span></span>
+                                <span class="text-end">9 : 00 PM</span>
+                            </div>
+                            <div class="border-2 border-dashed border-gray-300"></div>
+                            <div class="grid grid-cols-3 space-x-3">
+                                <button class="btn">Boarding Point - Laxmipur</button>
+                                <button class="btn">Dropping Point - Bogura</button>
+                                <button class="btn">Est. Time - 11 Hour</button>
+                            </div>
+                          
+                        </div>
+                    </div>
+
+                    <div class="w-[25%] flex flex-col justify-center items-center">
+                        <img src="./images/fare.png" alt="">
+                        <h3 class="text-2xl font-bold">550 Taka</h3>
+                        <p class="text-base">Per Seat</p>
+                    </div>
+                </div>
+
+            </section>
+    
+            <!-- ticket selling -->
+            <section class="mt-6">
+                <div class="grid grid-cols-3">
+                    <div class="col-span-2 p-6">
+                        <div class="text-2xl font-bold">
+                            <h1>Select Your Seat</h1>
+                        </div>
+                        <div class="border-2 border-dashed border-gray-300 my-3"></div>
+                        <div class="flex justify-between">
+                            <p class="space-x-1">
+                                <i class="fa-solid fa-couch"></i>
+                                <span>Available</span>
+                            </p>
+                            <p class="text-primary space-x-1">
+                                <i class="fa-solid fa-couch"></i>
+                                <span>Available</span>
+                            </p>
+                        </div>
+                        <div class="border-2 border-dashed border-gray-300 my-3"></div>
+
+                        <div class="grid grid-cols-12 items-center ">
+                            <p class="col-span-1"></p>
+                            <div class="col-span-11 grid grid-cols-10 gap-16">
+                                <p id="booked-seat" class="col-span-8 text-red-500 font-medium"></p>
+                                <button class="btn btn-md col-span-2">
+                                    <img src="./images/seat-gray.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <!-- row - 1 -->
+                        <div class="grid grid-cols-12 items-center">
+                            <p class="col-span-1">A</p>
+                            <div class="col-span-11 grid grid-cols-10 gap-16 mt-3">
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">A1</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">A2</button>
+                                <p class="col-span-2"></p>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">A3</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">A4</button>
+                            </div>
+                        </div>
+                        <!-- row - 2-->
+                        <div class="grid grid-cols-12 items-center">
+                            <p class="col-span-1">B</p>
+                            <div class="col-span-11 grid grid-cols-10 gap-16 mt-3">
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">B1</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">B2</button>
+                                <p class="col-span-2"></p>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">B3</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">B4</button>
+                                
+                            </div>
+                        </div>
+                        <!-- row - 3 -->
+                        <div class="grid grid-cols-12 items-center">
+                            <p class="col-span-1">C</p>
+                            <div class="col-span-11 grid grid-cols-10 gap-16 mt-3">
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">C1</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">C2</button>
+                                <p class="col-span-2"></p>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">C3</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">C4</button>
+                                
+                            </div>
+                        </div>
+                        <!-- row - 4 -->
+                        <div class="grid grid-cols-12 items-center">
+                            <p class="col-span-1">D</p>
+                            <div class="col-span-11 grid grid-cols-10 gap-16 mt-3">
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">D1</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">D2</button>
+                                <p class="col-span-2"></p>
+                                <button onclick="eventHandler(this)" class="btn btn-mD col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">D3</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">D4</button>
+                                
+                            </div>
+                        </div>
+                        <!-- row - 5 -->
+                        <div class="grid grid-cols-12 items-center">
+                            <p class="col-span-1">E</p>
+                            <div class="col-span-11 grid grid-cols-10 gap-16 mt-3">
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">E1</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">E2</button>
+                                <p class="col-span-2"></p>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">E3</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">E4</button>
+                                
+                            </div>
+                        </div>
+                        <!-- row - 6 -->
+                        <div class="grid grid-cols-12 items-center">
+                            <p class="col-span-1">F</p>
+                            <div class="col-span-11 grid grid-cols-10 gap-16 mt-3">
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">F1</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">F2</button>
+                                <p class="col-span-2"></p>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">F3</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">F4</button>
+                                
+                            </div>
+                        </div>
+                        <!-- row - 7 -->
+                        <div class="grid grid-cols-12 items-center">
+                            <p class="col-span-1">G</p>
+                            <div class="col-span-11 grid grid-cols-10 gap-16 mt-3">
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">G1</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">G2</button>
+                                <p class="col-span-2"></p>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">G3</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">G4</button>
+                                
+                            </div>
+                        </div>
+                        <!-- row - 8 -->
+                        <div class="grid grid-cols-12 items-center">
+                            <p class="col-span-1">H</p>
+                            <div class="col-span-11 grid grid-cols-10 gap-16 mt-3">
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">H1</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">H2</button>
+                                <p class="col-span-2"></p>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">H3</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">H4</button>
+                                
+                            </div>
+                        </div>
+                        <!-- row - 9 -->
+                        <div class="grid grid-cols-12 items-center">
+                            <p class="col-span-1">I</p>
+                            <div class="col-span-11 grid grid-cols-10 gap-16 mt-3">
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">I1</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">I2</button>
+                                <p class="col-span-2"></p>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">I3</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">I4</button>
+                                
+                            </div>
+                        </div>
+                 
+                        <!-- row - 10 -->
+                        <div class="grid grid-cols-12 items-center">
+                            <p class="col-span-1">J</p>
+                            <div class="col-span-11 grid grid-cols-10 gap-16 mt-3">
+                                <button  onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">J1</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">J2</button>
+                                <p class="col-span-2"></p>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">J3</button>
+                                <button onclick="eventHandler(this)" class="btn btn-md col-span-2 hover:bg-black hover:text-white transition-colors duration-200 ease-in-out">J4</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-2xl font-bold">
+                            <h1>Select Your Seat</h1>
+                        </div>
+                        <div class="border-2 border-dashed border-gray-300 my-3"></div>
+                        <div class="bg-gray-100 rounded-lg p-5">
+                            <ul class="flex justify-between font-semibold">
+                                <li class="flex gap-1">Seat 
+                                    <span id="selected-seat"  class="text-sm bg-primary w-4 h-4 p-2 rounded-full text-white flex justify-center items-center">0</span></li>
+                                <li>Class</li>
+                                <li>Price</li>
+                            </ul>
+                            <div class="border-2 border-dashed border-gray-300 my-3"></div>
+
+                            <div id="total-calculation">
+                                <p id="seat-collected" class="text-red-500 text-2xl font-bold text-center">No Seat Booked</p>
+                                <p id="max-seats" class="hidden text-primary text-2xl font-bold text-center">Maximum Seats Booked</p>
+                                <!-- <ul class="flex justify-between font-semibold">
+                                    <li>C1</li>
+                                    <li>Economy</li>
+                                    <li>550</li>
+                                </ul> -->
+                            </ul> 
+                            </div>
+                            <div class="border-2 border-dashed border-gray-300 my-3"></div>
+                            <ul class="flex justify-between font-semibold">
+                                <li>Total</li>
+                                <li></li>
+                                <li>BDT : <span id="total-amount">0</span></li>
+                            </ul>
+                            <div class="flex relative my-6">
+                                <input id="coupon-input" disabled type="text" placeholder="Have any coupon?" class="input input-bordered w-full" />
+                                <button id="coupon-btn" disabled class="absolute right-0 btn text-white font-semibold bg-primary">Apply</button>
+                            </div>
+                            <ul id="offer-part" class="flex justify-between font-semibold">
+                                <!-- <li>Discount :</li>
+                                <li></li>
+                                <li>- BDT : <span id="discount-money">0</span></li> -->
+                           </ul>
+                            <ul id="grand-total" class="flex justify-between font-semibold">
+                                <!-- <li>Grand Total</li>
+                                <li></li>
+                                <li>BDT : <span>0</span></li> -->
+                            </ul>
+                            <div id="wrong-coupon">
+                                <!-- <p class="text-lg text-red-500 font-semibold">Wrong Coupon</p> -->
+                            </div>
+                        </div>
+                        <div class="card bg-base-100 w-full shrink-0 mt-3">
+                            <form>
+                              <div class="form-control">
+                                <label class="label">
+                                  <span class="label-text font-bold">Passenger Name*</span>
+                                </label>
+                                <input disabled id="passenger-name" type="Text" placeholder="Enter your name" class="input input-bordered" required />
+                              </div>
+                              <div class="form-control">
+                                <label class="label">
+                                  <span class="label-text font-bold">Phone Number</span>
+                                </label>
+                                <input disabled id="phone-number" type="number" placeholder="Enter your Phone Number" class="input input-bordered" required />
+                              </div>
+                              <div class="form-control">
+                                <label class="label">
+                                  <span class="label-text font-bold">Email</span>
+                                </label>
+                                <input disabled id="email-id" type="email" placeholder="Enter your email" class="input input-bordered" required />
+                              </div>
+                            
+                            </form>
+                        </div>
+
+                        <div class="form-control mt-6">
+                               <button id="next-btn" disabled class="btn  font-bold text-white bg-primary uppercase" onclick="my_modal_1.showModal()">Next</button>
+                               <dialog id="my_modal_1" class="modal">
+                                   <div class="modal-box text-center flex flex-col justify-center items-center">
+                                    <img class="w-8" src="./images/success.png" alt="">
+                                     <h3 class="text-xl text-primary font-bold">Congratulations!</h3>
+                                     <p class="py-2 font-bold">Thak you for booking our bus seats. We are trying to give you the best service and good deals as well.</p>
+                                     <p>Shortly you will find a confirmation your email</p>
+                                <div class="modal-action">
+                               <form method="dialog">
+                                <button id="continue-btn" class="btn bg-primary text-white hover:bg-black hover:text-white">Continue</button>
+                              </form>
+                             </div>
+                            </div>
+                               </dialog>
+ 
+                          </div>
+
+                        <div class="flex justify-between mt-6">
+                            <a class="link text-blue-700" href="#">Terms and Conditions</a>
+                            <a class="link text-blue-700" href="#">Cancellation Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+         </section>
+    </main>
+    <footer class="h-60">
+
+    </footer>
+
+    <!-- scripts -->
+     <script src="/js/app.js"></script>
+</body>
+</html>
